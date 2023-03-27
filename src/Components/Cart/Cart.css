@@ -1,8 +1,19 @@
 .cart {
   background-color: rgba(255, 153, 0, 0.3);
   padding: 25px;
+  position: sticky;
+  top: 0;
 }
 
 .cart p {
-  font-weight: 400;
+  font-weight: 600;
+  color: blue;
+}
+
+.cart h4 {
+  color: purple;
+}
+.cart h6 {
+  font-size: 600;
+  color: brown;
 }
