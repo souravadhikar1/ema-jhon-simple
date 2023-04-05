@@ -1,11 +1,29 @@
-.shop-container{
-    display: grid;
-    grid-template-columns: 4fr 1fr;
+.shop-container {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
 }
 
-.product-container{
-    margin: 50px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 45px;
+.product-container {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+}
+
+.review-btn {
+  width: 90%;
+  text-decoration: none;
+  height: 50px;
+  margin: 10px auto;
+  background: #ff9900;
+  border-radius: 4px;
+  color: white;
+  font-size: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-link {
+  text-decoration: none;
 }
