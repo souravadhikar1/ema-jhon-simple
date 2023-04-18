@@ -4,8 +4,16 @@ import logo from "../../images/Logo.svg";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+
 const Header = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+  console.log(user);
+
+  const handleLogout = () => {
+    logOut()
+      .then((result) => {})
+      .catch((error) => console.log(error));
+  };
 
   return (
     <nav className="header">
@@ -16,7 +24,12 @@ const Header = () => {
         <Link to="/inventory">Inventory</Link>
         <Link to="/login">login</Link>
         <Link to="/signup">Sign Up</Link>
-        {user && <span>Welcome</span>}
+        {user && (
+          <span className="text-white">
+            Welcome {user.email}{" "}
+            <button onClick={handleLogout}> Sign Out</button>{" "}
+          </span>
+        )}
       </div>
     </nav>
   );
