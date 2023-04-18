@@ -1,10 +1,10 @@
 import React from "react";
-import "./Login.css";
+import "./SignUp.css";
 
-const Login = () => {
+const SignUp = () => {
   return (
     <div className="form-container">
-      <h1 className="form-title">Login</h1>
+      <h1 className="form-title">Sign Up</h1>
       <form>
         <div className="form-control">
           <label htmlFor="">Email</label>
@@ -14,10 +14,15 @@ const Login = () => {
           <label htmlFor="">Password</label>
           <input type="password" name="password" id="" required />
         </div>
-        <input className="btn-submit" type="submit" value="Login" />
+        <div className="form-control">
+          <label htmlFor=""> Confirm Password</label>
+          <input type="password" name="confirm" id="" required />
+        </div>
+
+        <input className="btn-submit" type="submit" value="Sign Up" />
       </form>
     </div>
   );
 };
 
-export default Login;
+export default SignUp;
